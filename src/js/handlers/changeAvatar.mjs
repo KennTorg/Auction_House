@@ -8,14 +8,12 @@ import { changeAvatar, getProfile } from "../api/profile/index.mjs";
 export async function setChangeAvatarListener() {
   const form = document.querySelector("#avatar-form");
   const avatarImage = document.querySelector("#user-avatar");
-  //const userName = document.querySelector("#user-name");
 
   if (form) {
     const { name } = load("profile");
     const avatar = load("avatar");
 
     avatarImage.src = avatar;
-    //userName.innerText = name;
 
     const profile = await getProfile(name);
 
