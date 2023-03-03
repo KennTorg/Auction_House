@@ -1,9 +1,6 @@
 import { load } from "../storage/index.mjs";
 
-//====== REMOVE THIS ???? ============
-//export const loggedIn = () => Boolean(load("token"));
-//export const profile = () => load("profile");
-//==========================================
+// Experimental
 
 // Displays or not login/logout/profile pages
 
@@ -24,6 +21,8 @@ export function userState() {
 
   return;
 }
+
+// Displays or not on single listing page
 
 export function isLoggedIn() {
   const accessToken = localStorage.getItem("token");
