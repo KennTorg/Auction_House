@@ -35,8 +35,8 @@ export function listingTemplate(listingData) {
   cardFooter.classList = "d-flex justify-content-around mt-3";
 
   // Card Bids
-  const lastBid = document.createElement("button");
-  lastBid.classList = "btn btn-secondary btn-small";
+  const lastBid = document.createElement("p");
+  lastBid.classList = "text-black";
   lastBid.innerText = "No bids yet";
 
   if (bids) {
@@ -44,7 +44,7 @@ export function listingTemplate(listingData) {
       if (bids.length > 1) {
         bids.sort((firstBid, secondBid) => firstBid.amount - secondBid.amount);
       }
-      lastBid.classList = "btn btn-secondary btn-small";
+      lastBid.classList = "text-black";
       lastBid.innerText = `$ ${bids[i].amount}`;
     }
   }
