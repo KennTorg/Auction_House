@@ -1,37 +1,32 @@
 import * as listeners from "./handlers/index.mjs";
 import * as listings from "./api/listings/index.mjs";
-import { getListings } from "./api/listings/index.mjs";
-//import * as profiles from "./api/profile/index.mjs";
-//import * as state from "./api/state.mjs";
+import * as profiles from "./api/profile/index.mjs";
+import * as state from "./api/state.mjs";
 
 const path = location.pathname;
 
 if (path === "/pages/auth/login/") {
   listeners.setLoginFormListener();
   listeners.setLogoutListener();
-  //state.userState();
+  state.userState();
 } else if (path === "/pages/auth/register/") {
   listeners.setRegisterFormListener();
   listeners.setLogoutListener();
-  //state.userState();
+  state.userState();
 } else if (path === "/index.html") {
   listeners.setLogoutListener();
-  //state.userState();
+  state.userState();
   listings.listingFeed();
   listings.searchListings();
   listeners.setCreateListingListener();
 } else if (path === "/pages/profile/") {
-  //listeners.setChangeAvatarListener();
+  listeners.setChangeAvatarListener();
   listeners.setLogoutListener();
-  //state.userState();
-  //profiles.profileInfo();
-  //profiles.changeAvatarRedirect();
+  state.userState();
+  profiles.profileInfo();
+  profiles.changeAvatarRedirect();
 } else if (path === "/pages/listings/") {
   listings.singleListing();
-  //state.isLoggedIn();
+  state.isLoggedIn();
   listeners.setPlaceBidListener();
 }
-console.log(getListings);
-//import router from "./router.mjs";
-
-//router();

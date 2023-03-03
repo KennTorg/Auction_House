@@ -1,11 +1,6 @@
 export function singleListingTemplate(listingData) {
   const { title, media, description, bids, endsAt } = listingData;
 
-  /* SINGLE LISTING HEADER
-  const pageHeader = document.querySelector(".single-header");
-  pageHeader.innerText = title;
-  pageHeader.classList = "container-fluid m-auto text-center mt-3 text-wrap text-break";
-  */
   // SINGLE LISTING CARD
 
   const singleListingContainer = document.createElement("div");
@@ -16,6 +11,7 @@ export function singleListingTemplate(listingData) {
   containerImgEnds.classList =
     "single-card d-flex flex-column justify-content-center";
 
+  // Carousel
   const carouselContainer = document.createElement("div");
   carouselContainer.classList = "itemImage m-auto carousel slide";
   carouselContainer.id = "carousel";
@@ -49,7 +45,7 @@ export function singleListingTemplate(listingData) {
       carouselInner.append(carouselItem);
     }
   }
-
+  // Carousel Buttons
   const slideButtonLeft = document.createElement("button");
   slideButtonLeft.classList = "carousel-control-prev";
   slideButtonLeft.type = "button";
@@ -83,6 +79,7 @@ export function singleListingTemplate(listingData) {
 
   carouselContainer.append(carouselInner, slideButtonLeft, slideButtonRight);
 
+  // Card Body
   const cardTitle = document.createElement("h4");
   cardTitle.classList = "m-auto text-center mt-2 text-break";
   cardTitle.innerText = title;
@@ -106,6 +103,7 @@ export function singleListingTemplate(listingData) {
 
   listingDescription.append(descriptionText);
 
+  // Bids
   const lastBid = document.createElement("button");
   lastBid.classList = "btn btn-secondary btn-small";
   lastBid.innerText = "No bids yet";

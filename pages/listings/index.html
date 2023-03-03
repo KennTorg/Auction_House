@@ -25,7 +25,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
-                        <a href="index.html">
+                        <a href="/index.html">
                             <h1 class="logo">OAH!</h1>
                         </a>
                         <li class="nav-item">
@@ -49,16 +49,17 @@
     <main>
         <div class="d-flex flex-column shadow m-3 p-3">
             <h1 class="single-header text-center"></h1>
-            <div class="container-fluid d-flex justify-content-center" id="single-listing">
+            <div class="container-fluid d-flex justify-content-center col-12 col-md-8" id="single-listing">
             </div>
             <!-- Place Bids-->
             <div id="place-bid-container">
                 <h3 class="text-center text-black">Place a bid</h3>
-                <div class="d-flex justify-content-center">
-                    <form class="form col-sm-1 justify-content-center" id="bid-form">
+                <div class="d-flex flex-column align-items-center">
+                    <form class="form col-sm-2 d-flex flex-column" id="bid-form">
                         <input class="form-control mb-3  " name="amount" type="number"></input>
                         <button class="btn btn-primary" id="bid-button">Place bid</button>
                     </form>
+
                 </div>
             </div>
         </div>
