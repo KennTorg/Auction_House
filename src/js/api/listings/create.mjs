@@ -12,8 +12,6 @@ const method = "post";
 export async function createListing(listData) {
   const createListingURL = `${API_URL}${action}`;
 
-  //listData.tags = listData.tags.split(",");
-
   const response = await authFetch(createListingURL, {
     method,
     body: JSON.stringify(listData),
