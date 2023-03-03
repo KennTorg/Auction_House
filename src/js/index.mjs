@@ -1,5 +1,6 @@
 import * as listeners from "./handlers/index.mjs";
-//import * as listings from "./api/listings/index.mjs";
+import * as listings from "./api/listings/index.mjs";
+import { getListings } from "./api/listings/index.mjs";
 //import * as profiles from "./api/profile/index.mjs";
 //import * as state from "./api/state.mjs";
 
@@ -16,9 +17,9 @@ if (path === "/pages/auth/login/") {
 } else if (path === "/index.html") {
   listeners.setLogoutListener();
   //state.userState();
-  //listings.listingFeed();
-  //listings.searchListings();
-  //listeners.setCreateListingListener();
+  listings.listingFeed();
+  listings.searchListings();
+  listeners.setCreateListingListener();
 } else if (path === "/pages/profile/") {
   //listeners.setChangeAvatarListener();
   listeners.setLogoutListener();
@@ -26,11 +27,11 @@ if (path === "/pages/auth/login/") {
   //profiles.profileInfo();
   //profiles.changeAvatarRedirect();
 } else if (path === "/pages/listings/") {
-  //listings.singleListing();
+  listings.singleListing();
   //state.isLoggedIn();
-  //listeners.setPlaceBidListener();
+  listeners.setPlaceBidListener();
 }
-
+console.log(getListings);
 //import router from "./router.mjs";
 
 //router();
