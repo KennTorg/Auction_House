@@ -1,11 +1,6 @@
 export function singleListingTemplate(listingData) {
   const { title, media, description, bids, endsAt } = listingData;
 
-  /* SINGLE LISTING HEADER
-  const pageHeader = document.querySelector(".single-header");
-  pageHeader.innerText = title;
-  pageHeader.classList = "container-fluid m-auto text-center mt-3 text-wrap text-break";
-  */
   // SINGLE LISTING CARD
 
   const singleListingContainer = document.createElement("div");

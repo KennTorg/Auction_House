@@ -10814,4 +10814,44 @@ header {
   transform: translateY(-10px);
 }
 
+.profile-card {
+  width: 14rem;
+  height: 22rem;
+  border: none;
+  color: black;
+}
+
+.profile-card img {
+  width: 100%;
+  min-height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.profile-a-tag {
+  text-decoration: none;
+}
+
+.banner {
+  background-image: url("https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105__340.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+.avatar-image {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-left: 15px;
+}
+
+.avatar-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=styles.css.map */
