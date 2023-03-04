@@ -7,7 +7,7 @@ export function setCreateListingListener() {
   const form = document.querySelector("#create-listing");
 
   if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       const form = event.target;
@@ -19,6 +19,12 @@ export function setCreateListingListener() {
       const media = formData.get("media").split(", ");
       const endsAt = formData.get("endsAt");
 
+      // Adds form validation
+      if (!title || !description || !endsAt) {
+        alert("Please fill in all required fields");
+        return;
+      }
+
       const listing = { title, description, tags, media, endsAt };
 
       // Clearing the form
@@ -29,9 +35,14 @@ export function setCreateListingListener() {
         delete listing.media;
       }
 
-      // Sends it to the API
-      createListing(listing);
-      location.reload();
+      try {
+        // Sends it to the API
+        await createListing(listing);
+        // Replace with more specific action as needed
+        location.reload();
+      } catch (error) {
+        alert(`Failed to create listing: ${error.message}`);
+      }
     });
   }
 }
