@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Charm&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10852,6 +10853,33 @@ header {
   width: 100%;
   height: 150px;
   object-fit: cover;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+ul a {
+  font-family: "Poppins", sans-serif;
+}
+
+.welcome-container h1, .welcome-container .h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h2, .h2,
+h3,
+.h3,
+h4,
+.h4,
+p {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
