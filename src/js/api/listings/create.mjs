@@ -12,16 +12,20 @@ const method = "post";
 export async function createListing(listData) {
   const createListingURL = `${API_URL}${action}`;
 
-  const response = await authFetch(createListingURL, {
-    method,
-    body: JSON.stringify(listData),
-  });
+  try {
+    const response = await authFetch(createListingURL, {
+      method,
+      body: JSON.stringify(listData),
+    });
 
-  const results = await response.json();
-  if (response.ok) {
-    location.reload();
-    return results;
-  } else {
-    alert(response.error);
+    if (response.ok) {
+      // Replace with more specific action as needed
+      location.reload();
+      return await response.json();
+    } else {
+      throw new Error(`Failed to create listing: ${response.statusText}`);
+    }
+  } catch (error) {
+    alert(error.message);
   }
 }
