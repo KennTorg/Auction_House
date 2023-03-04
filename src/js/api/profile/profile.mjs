@@ -47,7 +47,7 @@ export async function profileInfo() {
   // User Info
 
   userName.innerText = name;
-  userAvatar.src = avatar;
+  userAvatar.src = user.avatar;
   userCredit.innerText = user.credits;
 
   // User Bids
