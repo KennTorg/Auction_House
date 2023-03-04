@@ -59,6 +59,8 @@
 
 - This projet were focused on being userfriendly and easy to navigate and have working functions rather than design. The application were designed to easely could change colors or add backgrounds. But chose to stick with the modern look, the Apple feels...
 
+**All the required files/links for submission of SP2 found below**
+
 ### Links
 
 <table>
