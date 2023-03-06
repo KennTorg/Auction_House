@@ -13,7 +13,7 @@ if (path === "/pages/auth/login/") {
   listeners.setRegisterFormListener();
   listeners.setLogoutListener();
   state.userState();
-} else if (path === "/index.html") {
+} else if (path === "/") {
   listeners.setLogoutListener();
   state.userState();
   listings.listingFeed();
