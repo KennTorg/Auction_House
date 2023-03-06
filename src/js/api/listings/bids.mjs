@@ -22,6 +22,6 @@ export async function placeBid(id, amount) {
     alert("You have placed a bid!");
     return;
   } else {
-    alert(response.error);
+    alert(response.statusText);
   }
 }

@@ -47,7 +47,7 @@ export async function profileInfo() {
   // User Info
 
   userName.innerText = name;
-  userAvatar.src = user.avatar;
+  userAvatar.src = avatar;
   userCredit.innerText = user.credits;
 
   // User Bids
@@ -119,6 +119,6 @@ export function changeAvatarRedirect() {
   const changeAvatarButton = document.querySelector("#change-avatar-modal");
   changeAvatarButton.addEventListener(
     "click",
-    () => (changeAvatarButton.href = `/pages/profile/?name=${name}`)
+    () => (changeAvatarButton.href = `/pages/profile/index.html?name=${name}`)
   );
 }
